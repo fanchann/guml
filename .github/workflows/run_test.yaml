@@ -14,5 +14,7 @@ jobs:
           uses: actions/setup-go@v4
           with:
             go-version: '1.22.x'
+        - name: install graphviz
+          run: sudo apt install graphviz
         - name: run unit test
           run: go test -v -run=. github.com/fanchann/guml
