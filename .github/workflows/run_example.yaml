@@ -20,6 +20,7 @@ jobs:
         run: |
           cd examples/
           go run main.go
+          ls -l
       - name: check generated files
         run: |
           if [ -f examples.png ]; then
