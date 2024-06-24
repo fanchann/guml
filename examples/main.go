@@ -38,6 +38,10 @@ func main() {
 		Entity(orderProd).
 		OneToMany(cust, order).
 		OneToMany(order, orderProd).
-		ManyToOne(orderProd, prod).
-		Gen("examples")
+		ManyToOne(orderProd, prod)
+
+	err := g.Gen("examples")
+	if err != nil {
+		panic(err)
+	}
 }
