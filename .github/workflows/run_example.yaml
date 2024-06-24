@@ -20,6 +20,7 @@ jobs:
         run: |
           cd examples/
           go run main.go
+          ls -l
       - name: check generated files
         run: |
           if [ -f examples.png ]; then
@@ -31,7 +32,7 @@ jobs:
       - name: auto commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "[AUTO] Generated examples.png"
+          commit_message: "[AUTO]"
           branch: master
           commit_options: '--no-verify --signoff'
           repository: .
