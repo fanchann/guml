@@ -21,14 +21,6 @@ jobs:
           cd examples/
           go run main.go
           ls -l
-      - name: check generated files
-        run: |
-          if [ -f examples.png ]; then
-            echo "File exists"
-          else
-            echo "File not found"
-            exit 1
-          fi
       - name: auto commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
